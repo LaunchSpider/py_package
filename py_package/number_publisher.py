@@ -8,6 +8,8 @@ from example_interfaces.msg import Int64
 class NumberPublisherNode(Node): 
     def __init__(self):
         super().__init__("number_publisher")
+        
+        self.declare_parameter("test123")
 
         self.publisher_ = self.create_publisher(Int64, "number", 10)
 
